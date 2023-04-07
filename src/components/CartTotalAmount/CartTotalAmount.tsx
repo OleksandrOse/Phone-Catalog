@@ -15,6 +15,9 @@ export const CartTotalAmount: FC<Props> = ({
     return product.price * product.count;
   }).reduce((a: number, b: number) => a + b, 0);
 
+  const totalCount = cart.map((product: CardItem) => product.count)
+    .reduce((a: number, b: number) => a + b, 0);
+
   const isWarning = () => {
     setWarning(true);
     warningTimer(setWarning, false, 3000);
@@ -28,7 +31,7 @@ export const CartTotalAmount: FC<Props> = ({
         </p>
       )}
       <h2 className="cart__total-amout">{`$${totalPrice}`}</h2>
-      <p className="cart__total-items">{`Total for ${cart} items`}</p>
+      <p className="cart__total-items">{`Total for ${totalCount} items`}</p>
       <button
         className="cart__total-button"
         type="button"
