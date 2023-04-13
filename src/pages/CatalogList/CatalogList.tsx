@@ -34,7 +34,7 @@ export const CatalogList: FC<Props> = ({ title }) => {
 
   const sortedProduct = useMemo(() => {
     return sortByProducts(filteredProducts, sortBy);
-  }, [sortBy]);
+  }, [sortBy, pathname, query]);
 
   const visibleProducts = sortedProduct.slice(
     (page - 1) * +countShow, +countShow * page,

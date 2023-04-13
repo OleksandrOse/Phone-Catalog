@@ -27,18 +27,21 @@ export const Categories: FC<Props> = ({ products }) => {
           name="Mobile phones"
           srcImage="new/img/category-phones.png"
           count={countPhones}
+          to="phones"
         />
 
         <Category
           name="Tablets"
           srcImage="new/img/category-tablets.png"
           count={countTablets}
+          to="tablets"
         />
 
         <Category
           name="Accessories"
           srcImage="new/img/category-accessories.png"
           count={countAccessories}
+          to="accessories"
         />
       </div>
     </div>

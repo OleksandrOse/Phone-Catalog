@@ -13,5 +13,9 @@
 
   &__link {
     color: $colorBlack;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: inherit;
+    font-weight: inherit;
   }
 }

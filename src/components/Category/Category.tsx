@@ -9,13 +9,19 @@ type Props = {
   name: string;
   srcImage: string;
   count: number;
+  to: string;
 };
 
-export const Category: FC<Props> = ({ name, srcImage, count }) => {
+export const Category: FC<Props> = ({
+  name,
+  srcImage,
+  count,
+  to,
+}) => {
   return (
     <div className="category">
       <NavLink
-        to="phones"
+        to={to}
         className="category__link"
         onClick={() => {
           window.scrollTo({ top: 0 });
